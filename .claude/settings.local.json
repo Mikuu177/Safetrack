@@ -47,7 +47,9 @@
       "Bash(gradlew.bat build:*)",
       "Bash(\"./gradlew.bat\" build)",
       "Bash(.\\gradlew.bat build:*)",
-      "Bash(\"./gradlew.bat\" assembleDebug --info)"
+      "Bash(\"./gradlew.bat\" assembleDebug --info)",
+      "Bash(.gradlew assembleDebug --stacktrace)",
+      "Bash(.gradlew:*)"
     ],
     "deny": []
   }

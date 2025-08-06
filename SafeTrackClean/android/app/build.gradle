@@ -79,12 +79,7 @@ android {
 
     namespace "com.safetrack"
     
-    // Use Java toolchain instead of compileOptions to avoid conflict with React Native Gradle plugin
-    // compileOptions {
-    //     sourceCompatibility JavaVersion.VERSION_17
-    //     targetCompatibility JavaVersion.VERSION_17
-    // }
-    
+    // Force C++17 to fix React Native 0.80.1 compatibility issues
     defaultConfig {
         applicationId "com.safetrack"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -92,6 +87,12 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    
+    // Use Java toolchain instead of compileOptions to avoid conflict with React Native Gradle plugin
+    // compileOptions {
+    //     sourceCompatibility JavaVersion.VERSION_17
+    //     targetCompatibility JavaVersion.VERSION_17
+    // }
     signingConfigs {
         debug {
             storeFile file('debug.keystore')
